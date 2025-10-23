@@ -1,0 +1,540 @@
+/* ========== BASE RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    background-color: #000611;
+    color: #e0e6f0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ========== HEADER ========== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: transparent;
+    z-index: 10;
+    transition: background 0.6s ease, box-shadow 0.6s ease;
+}
+
+body.scrolled .site-header {
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+body:not(.intro-complete) .site-header,
+body:not(.intro-complete) #logo-bg {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+}
+
+/* ========== ANIMATED INTRO LOGO ========== */
+.layout-title-awa #logo-image-animated {
+    position: fixed !important;
+    top: 22% !important;
+    left: 50% !important;
+    width: 100vw !important;
+    height: 38vh !important;
+    transform: translate(-50%, -50%) scale(1);
+    transform-origin: top left;
+    background: repeating-linear-gradient(125deg,
+            rgba(3, 8, 12, .4) 0%,
+            rgba(3, 8, 12, .4) 50%,
+            rgba(3, 8, 12, 0) 50%,
+            rgba(3, 8, 12, 0) 100%);
+    background-size: 220% 100%;
+    display: flex !important;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 15;
+    transition: top 0.8s ease, left 0.8s ease, transform 0.8s ease, background 0.8s ease;
+}
+
+body.scrolled #logo-image-animated {
+    position: fixed !important;
+    top: 3px !important;
+    left: 20px !important;
+    width: auto !important;
+    height: auto !important;
+    transform: translate(0, 0) scale(0.25) !important;
+    transform-origin: top left !important;
+    background: transparent !important;
+    z-index: 15;
+    transition:
+        top 0.8s ease,
+        left 0.8s ease,
+        transform 0.8s ease,
+        background 0.8s ease;
+}
+
+/* maintain child aspect + visibility */
+body.scrolled #logo-image-animated div {
+    width: clamp(200px, 40vw, 600px) !important;
+    height: auto !important;
+    aspect-ratio: 2.4 / 1 !important;
+    display: block !important;
+    position: relative;
+}
+
+body.scrolled #logo-image-animated p {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: none !important;
+    transform: none !important;
+}
+
+body.scrolled #logo-image-animated p:nth-of-type(1) {
+    left: 5% !important;
+    /* pushes the globe slightly right */
+    top: 0 !important;
+}
+
+body.scrolled #logo-image-animated p:nth-of-type(2) {
+    left: 5% !important;
+    /* moves the "ARE WE ALONE?" text right */
+    top: 0 !important;
+    background-position: 80% center !important;
+}
+
+body.scrolled #logo-image-animated p:first-child::before {
+    left: 20% !important;
+    /* moves the line horizontally */
+    top: 0 !important;
+    transform: rotateZ(37.5deg) scale(1.2);
+    transform-origin: center center;
+}
+
+
+/* Child Elements */
+#logo-image-animated div {
+    height: 95% !important;
+    aspect-ratio: 2.4 / 1;
+    width: fit-content !important;
+    margin: 0 auto;
+    position: relative;
+}
+
+#logo-image-animated p {
+    position: absolute;
+    background-repeat: no-repeat;
+    display: inline-block !important;
+    margin: 0;
+}
+
+/* Logo mark */
+#logo-image-animated p:nth-of-type(1) {
+    background-image: url(assets/awa-logo-mark.svg);
+    height: 88% !important;
+    left: 8% !important;
+    top: 2% !important;
+    aspect-ratio: 1 / 1;
+    clip-path: polygon(0% 0%, 87% 0%, 10% 100%, 0% 100%);
+    filter: drop-shadow(0px 2px 1px #00000066);
+    animation: title-mark 1s ease-in-out 1.5s forwards;
+    background-position: 420% 0%;
+}
+
+@keyframes title-mark {
+    from {
+        background-position: 420% 0%;
+    }
+
+    to {
+        background-position: 0% 0%;
+    }
+}
+
+/* Divider line */
+#logo-image-animated p:first-child::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: #e7c33700;
+    transform: rotateZ(37.5deg) scale(1.25);
+    position: absolute;
+    top: 0;
+    left: 47%;
+    animation: title-divider .5s linear 1s forwards;
+}
+
+@keyframes title-divider {
+    from {
+        background: #e7c33700;
+    }
+
+    to {
+        background: #e7c337ff;
+    }
+}
+
+/* Logo text */
+#logo-image-animated p:nth-of-type(2) {
+    background-image: url(./assets/awa-logo-title.svg);
+    height: 82% !important;
+    top: 5% !important;
+    left: 14.5% !important;
+    aspect-ratio: 2.25 / 1;
+    background-size: 99%;
+    background-position: -9200% 0%;
+    clip-path: polygon(34.25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    filter: drop-shadow(0px 2px 1px #00000066);
+    animation: title-text 1s ease-in-out 1.5s forwards;
+}
+
+@keyframes title-text {
+    from {
+        background-position: -9200% 0%;
+    }
+
+    to {
+        background-position: 120% 0%;
+    }
+}
+
+#logo-image-animated span {
+    display: none;
+}
+
+/* ========== HEADER BACKGROUND IMAGE ========== */
+#header-bg {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    background: url('./images/AWABackground.jpeg') center/cover no-repeat;
+    z-index: 5;
+    opacity: 1;
+    transition: opacity 1.5s ease;
+}
+
+body.scrolled #header-bg {
+    opacity: 0.5;
+}
+
+/* ========== PAGE SECTIONS ========== */
+main {
+    padding-top: 64px;
+}
+
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+    background-image: linear-gradient(to bottom, #000611, #031627);
+}
+
+.section-2,
+.section-4 {
+    background-image: linear-gradient(to top, #000611, #031627);
+}
+
+.section-1-inner,
+.section-2-inner,
+.section-3-inner,
+.section-4-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 40px;
+    gap: 20px;
+}
+
+.section-1-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 20px !important;
+}
+
+.section-text {
+    padding: 10px;
+    max-width: 1200px;
+    text-align: left;
+    font-size: 1.5rem;
+    color: #a4b8d3;
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-family: 'Zekton', sans-serif;
+    color: #87FFFF;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.section-2 img,
+.section-3 img,
+.section-4 img {
+    border-radius: 10px;
+}
+
+.section-2 img {
+    width: 20%;
+    flex-grow: 1;
+}
+
+.section-3 img {
+    width: 20%;
+    flex-grow: 1;
+}
+
+.section-4 img {
+    width: 15%;
+}
+
+
+/* ========== BUTTON ========== */
+.start-button {
+    font-family: 'Zekton', sans-serif;
+    background-color: #000611;
+    border: 1px solid #87ffff;
+    color: #87ffff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.start-button:hover {
+    background-color: #031627;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 40px;
+    font-size: 0.9rem;
+    color: #7c8a9f;
+    background: #000;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.footer-right img,
+.footer-left img {
+    height: 30px;
+}
+
+footer a {
+    color: #7c8a9f;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #87ffff;
+}
+
+#infini-logo {
+    left: 20px;
+    bottom: 20px;
+    height: 30px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 1024px) {
+    #logo-image-animated {
+        top: 25% !important;
+        height: 30vh !important;
+    }
+
+    body.scrolled #logo-image-animated {
+        transform: scale(0.35);
+        left: 12px !important;
+        top: 6px !important;
+    }
+
+    #logo-image-animated p:nth-of-type(2) {
+        left: 10% !important;
+        background-size: 95% !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Layout adjustments */
+    .section-2-inner,
+    .section-3-inner,
+    .section-4-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-2 img,
+    .section-3 img,
+    .section-4 img {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .section-text {
+        width: 90%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .start-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-center {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+    }
+
+    /* Logo scaling */
+    .layout-title-awa #logo-image-animated {
+        top: 15% !important;
+        height: 25vh !important;
+        width: 100% !important;
+        left: 0 !important;
+        transform: none !important;
+        background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0.6) 0%,
+                rgba(0, 0, 0, 0.3) 60%,
+                rgba(0, 0, 0, 0) 100%);
+        background-size: cover;
+    }
+
+    .layout-title-awa #logo-image-animated>div {
+        margin: 0 auto;
+        transform: scale(0.85);
+    }
+
+    body.scrolled #logo-image-animated {
+        transform: scale(0.45);
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Default logo layout (centered translucent bar) */
+    .layout-title-awa #logo-image-animated {
+        position: fixed !important;
+        top: 15% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 100vw !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        height: 22vh !important;
+        background: linear-gradient(180deg,
+                rgba(0, 0, 0, 0.7) 0%,
+                rgba(0, 0, 0, 0.45) 65%,
+                rgba(0, 0, 0, 0) 100%) !important;
+        background-size: 100% 100% !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        overflow-x: visible !important;
+        clip-path: none !important;
+        z-index: 15 !important;
+
+        /* 👇 add smooth animation for both scroll directions */
+        transition:
+            top 0.8s ease,
+            left 0.8s ease,
+            transform 0.8s ease,
+            width 0.8s ease,
+            height 0.8s ease,
+            background 0.8s ease;
+    }
+
+    /* Keep inner logo centered */
+    .layout-title-awa #logo-image-animated>div {
+        margin: 0 auto !important;
+        transform: scale(0.85) !important;
+        transition: transform 0.8s ease;
+    }
+
+    /* When scrolled, move to top-left */
+    body.scrolled .layout-title-awa #logo-image-animated {
+        position: fixed !important;
+        top: -8px !important;
+        left: -10px !important;
+        width: auto !important;
+        height: auto !important;
+        transform: none !important;
+        background: transparent !important;
+        min-width: 0 !important;
+        max-width: none !important;
+    }
+
+    body.scrolled .layout-title-awa #logo-image-animated>div {
+        transform: scale(0.7) !important;
+    }
+
+    body.scrolled .layout-title-awa #logo-image-animated p:nth-of-type(1),
+    body.scrolled .layout-title-awa #logo-image-animated p:nth-of-type(2) {
+        left: 0 !important;
+        top: 0 !important;
+    }
+
+    body.scrolled .layout-title-awa #logo-image-animated p:first-child::before {
+        left: 18% !important;
+        transform: rotateZ(37.5deg) scale(1.1) !important;
+    }
+
+    /* Fix internal offsets */
+    #logo-image-animated p:nth-of-type(1),
+    #logo-image-animated p:nth-of-type(2) {
+        top: 3% !important;
+    }
+
+    #logo-image-animated p:nth-of-type(2) {
+        background-size: 88% !important;
+        left: 8% !important;
+    }
+}
