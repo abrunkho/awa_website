@@ -537,4 +537,8 @@ footer a:hover {
         background-size: 88% !important;
         left: 8% !important;
     }
+
+    body {
+        font-size: 14px;
+    }
 }
