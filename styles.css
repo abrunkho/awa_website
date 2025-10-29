@@ -538,7 +538,11 @@ footer a:hover {
         left: 8% !important;
     }
 
-    body {
+    .section-text {
         font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
     }
 }
