@@ -271,7 +271,7 @@ main {
 h1,
 h2 {
     font-family: 'Zekton', sans-serif;
-    color: #87FFFF;
+    color: #EBC60C
 }
 
 h1 {
@@ -307,8 +307,8 @@ h2 {
 .start-button {
     font-family: 'Zekton', sans-serif;
     background-color: #000611;
-    border: 1px solid #87ffff;
-    color: #87ffff;
+    border: 1px solid #EBC60C;
+    color: #EBC60C;
     padding: 12px 28px;
     border-radius: 6px;
     cursor: pointer;
