@@ -98,14 +98,14 @@
 
     <!-- JS: Scroll detection -->
     <script>
-        // Wait for the intro animation to finish (e.g., 4 seconds)
+        // Wait for the intro animation to finish (4 seconds)
         window.addEventListener("load", () => {
             setTimeout(() => {
                 document.body.classList.add("intro-complete");
-            }, 4000); // match your fadeOut timing
+            }, 4000); 
         });
 
-        // Keep your scroll detection below
+        // Scroll detection below
         window.addEventListener("scroll", function () {
             const scrollY = window.scrollY;
             if (scrollY > 50) {
