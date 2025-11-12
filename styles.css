@@ -294,8 +294,8 @@ h2 {
 }
 
 .section-3 img {
-    width: 20%;
-    flex-grow: 1;
+    width: 15%;
+    height: auto;
 }
 
 .section-4 img {
