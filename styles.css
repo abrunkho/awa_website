@@ -10,7 +10,7 @@
 
 body {
     background-color: #000611;
-    color: #ffffff;
+    color: #ffffffe8;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -290,23 +290,24 @@ h2 {
 }
 
 .section-2 img {
-    width: 50%;
+    width: 25%;
     height: auto;
 }
 
 .section-3 img {
-    width: 50%;
+    width: 25%;
     height: auto;
 }
 
 .section-4 img {
-    width: 35%;
+    width: 30%;
 }
 
 
 /* ========== BUTTON ========== */
 .start-button {
     font-family: 'Zekton', sans-serif;
+    font-size: 14pt;
     background-color: #000611;
     border: 1px solid #EBC60C;
     color: #EBC60C;
