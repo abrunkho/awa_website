@@ -231,20 +231,18 @@ main {
     padding-top: 64px;
 }
 
-.section-1,
-.section-3 {
+.section-1 {
     background-image: linear-gradient(to bottom, #000611, #031627);
 }
 
 .section-2,
-.section-4 {
+.section-3 {
     background-image: linear-gradient(to top, #000611, #031627);
 }
 
 .section-1-inner,
 .section-2-inner,
-.section-3-inner,
-.section-4-inner {
+.section-3-inner {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -281,17 +279,21 @@ h2 {
     font-size: 2rem;
 }
 
-.section-4 img {
+.section-3 h2 {
+    padding-top: 20px;
+}
+
+.section-3 img {
     border-radius: 10px;
 }
 
-.section-2 img {
+.section-3 img {
     width: 25%;
     height: auto;
 }
 
 
-.section-4 img {
+.section-3 img {
     width: 30%;
 }
 
@@ -300,6 +302,7 @@ h2 {
     width: 100%;
     position: relative;
     margin: 0 auto;
+
 }
 
 .carousel-container img {
