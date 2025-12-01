@@ -257,6 +257,12 @@ main {
     gap: 20px !important;
 }
 
+.section-3-inner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 20px !important;
+}
+
 .section-text {
     padding: 10px;
     max-width: 1200px;
