@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/msl2ngy.css">
+    <script src="awa.js" defer></script>
 </head>
 
 <body>
@@ -35,47 +36,83 @@
                 <p class="section-text"><em>Are We Alone?</em> translates authentic astrobiology science and discovery
                     into engaging story-driven experiences that advance public understanding of the search for life
                     beyond Earth. </p>
-                <p class="section-text">Explore the prototype below!</p>
             </div>
         </div>
 
         <div class="section-2">
             <h2>A Framework for Exploration</h2>
             <div class="section-2-inner">
-                <img src="images/europa_collage.png" alt="Planet illustration">
                 <div class="section-text">
                     <p>Created by scientists, educators, and technologists, <em>Are We Alone?</em> is a web-based
                         framework of experiences for anyone interested in learning more about the scientific search for
-                        life.</p>
-                    <br>
-                    <p><em>Are We Alone?</em> blends virtual exploration of Mars, Europa, and beyond with adaptive,
+                        life.<em> Are We Alone?</em> blends virtual exploration of Mars, Europa, and beyond with
+                        adaptive,
                         personalized learning experiences that engage learners in the process of discovery.</p>
                     <br>
-                    <p>It’s more than a single experience. <em>Are We Alone?</em> is a framework that expands with new
-                        discoveries, driven by a growing network of scientists and educators.</p>
+                    <p>It's more than a single experience.<em> Are We Alone?</em> is a framework that expands with new
+                        discoveries, driven by a growing network of scientists and educators.
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="section-3">
-            <h2>Learn More… and Join the Network</h2>
-            <div class="section-3-inner">
-                <p class="section-text">Continue to the full site to explore the prototype and learn how you can
-                    contribute to <em>Are We Alone?</em></p>
-                <img src="images/mars_collage.png" alt="Mars rover image">
+        <!-- Image Carousel Here (currently using placeholder text and Images)-->
+        <div class="carousel-container">
+            <!-- Individual Slides -->
+            <div class="carousel-slide fade">
+                <h3>Mars: The Red Frontier</h3>
+                <img src="images/mars_one.jpg" alt="picture of Mars from orbit" style="width:100%">
+                <div class="slideText">Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing
+                    elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in
+                    id cursus mi pretium tellus duis.</div>
+            </div>
+            <div class="carousel-slide fade">
+                <h3>Analog Earth Expedition</h3>
+                <img src="images/stromatolites_two.png" alt="picture of stromatolites from Shark Bay, Australia"
+                    style="width:100%">
+                <div class="slideText caption2">Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet
+                    consectetur
+                    adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
+                </div>
+            </div>
+            <div class="carousel-slide fade">
+                <h3>Project: Europa</h3>
+                <img src="images/europa_two.png" alt="picture of Europa orbiting Jupiter" style="width:100%">
+                <div class="slideText caption3">Lorem ipsum dolor sit amet consectetur adipiscing elit. Sit amet
+                    consectetur
+                    adipiscing elit quisque faucibus ex. Adipiscing elit quisque faucibus ex sapien vitae pellentesque.
+                </div>
+            </div>
+            <div class="carousel-slide fade">
+                <h3>Saturn System Explorer: Enceladus</h3>
+                <img src="images/enceladus_two.png" alt="picture of Enceladus, one of Saturn's moon" style="width:100%">
+                <div class="slideText caption4">Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet
+                    consectetur adipiscing elit quisque faucibus.</div>
+            </div>
+
+
+
+            <!-- The Pause Button and Dots -->
+            <div class="dot-container">
+                <!-- Pause Button-->
+                <button id="pauseBtn" aria-label="Pause slideshow">&#x23F8;</button>
+                <button class="dot" onclick="currentSlide(1)" aria-label="Go to slide 1"></button>
+                <button class="dot" onclick="currentSlide(2)" aria-label="Go to slide 2"></button>
+                <button class="dot" onclick="currentSlide(3)" aria-label="Go to slide 3"></button>
+                <button class="dot" onclick="currentSlide(4)" aria-label="Go to slide 4"></button>
             </div>
         </div>
 
         <div class="section-4">
-            <h2>Begin the Journey</h2>
+            <h2>Learn More… and Join the Network</h2>
             <div class="section-4-inner">
                 <div class="section-4-nested">
-                    <p class="section-text">Your mission starts here!</p><br>
+                    <p class="section-text">Continue to the full site to explore the prototype and learn how you can
+                        contribute to <em>Are We Alone?</em></p><br>
                     <button class="start-button">
-                        Enter Experience
+                        Get Started Now
                     </button>
                 </div>
-                <img src="images/perseverence_art.jpg" alt="Planet image">
             </div>
         </div>
     </main>
@@ -97,27 +134,6 @@
             </a>
         </div>
     </footer>
-
-    <!-- JS: Scroll detection -->
-    <script>
-        // Wait for the intro animation to finish (4 seconds)
-        window.addEventListener("load", () => {
-            setTimeout(() => {
-                document.body.classList.add("intro-complete");
-            }, 4000);
-        });
-
-        // Scroll detection below
-        window.addEventListener("scroll", function () {
-            const scrollY = window.scrollY;
-            if (scrollY > 50) {
-                document.body.classList.add("scrolled");
-            } else {
-                document.body.classList.remove("scrolled");
-            }
-        });
-    </script>
-
 </body>
 
 </html>

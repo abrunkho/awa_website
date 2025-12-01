@@ -232,9 +232,7 @@ main {
 }
 
 .section-1,
-.section-2,
-.section-3,
-.section-4 {
+.section-3 {
     background-image: linear-gradient(to bottom, #000611, #031627);
 }
 
@@ -283,8 +281,6 @@ h2 {
     font-size: 2rem;
 }
 
-.section-2 img,
-.section-3 img,
 .section-4 img {
     border-radius: 10px;
 }
@@ -294,20 +290,139 @@ h2 {
     height: auto;
 }
 
-.section-3 img {
-    width: 25%;
-    height: auto;
-}
 
 .section-4 img {
     width: 30%;
+}
+
+/* ========== IMAGE CAROUSEL ========== */
+.carousel-container {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.carousel-container img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-container h3 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffffe8;
+    font-size: 28px;
+    font-family: Zekton, sans-serif;
+    padding: 8px 12px;
+    background-color: #031627;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+.carousel-slide {
+    display: none;
+}
+
+/* Slide text */
+.slideText {
+    color: #ffffffe8;
+    font-size: 20px;
+    font-family: Zekton, sans-serif;
+    padding: 8px 12px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    text-align: left;
+    background-color: #031627;
+    border-radius: 10px;
+    opacity: 0.7;
+    width: 30%;
+}
+
+.caption2 {
+    top: 30%;
+    left: 60%;
+}
+
+.caption3 {
+    top: 45%;
+    left: 15%;
+}
+
+.caption4 {
+    top: 65%;
+    left: 10%;
+}
+
+
+/* The dots/bullets/indicators */
+.dot-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0 3px;
+}
+
+.dot:focus {
+    outline: 2px solid white;
+    /* visible keyboard focus */
+    outline-offset: 2px;
+}
+
+#pauseBtn {
+    display: inline-block;
+    margin-right: 10px;
+    /* space before dots */
+    padding: 6px 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.active,
+.dot:hover {
+    background-color: #bbb;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 
 /* ========== BUTTON ========== */
 .start-button {
     font-family: 'Zekton', sans-serif;
-    font-size: 14pt;
+    font-size: 1.5rem;
     background-color: #000611;
     border: 1px solid #EBC60C;
     color: #EBC60C;
@@ -394,15 +509,12 @@ footer a:hover {
 @media (max-width: 768px) {
 
     /* Layout adjustments */
-    .section-2-inner,
-    .section-3-inner,
+
     .section-4-inner {
         flex-direction: column;
         text-align: center;
     }
 
-    .section-2 img,
-    .section-3 img,
     .section-4 img {
         width: 70%;
         margin-bottom: 20px;
