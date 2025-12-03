@@ -322,7 +322,7 @@ h2 {
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    color: #ffffffe8;
+    color: #EBC60C;
     font-size: 28px;
     font-family: Zekton, sans-serif;
     padding: 8px 12px;
@@ -337,7 +337,7 @@ h2 {
 
 /* Slide text */
 .slideText {
-    color: #ffffffe8;
+    color: #EBC60C;
     font-size: 20px;
     font-family: Zekton, sans-serif;
     padding: 8px 12px;
@@ -445,7 +445,7 @@ h2 {
 
 .start-button:hover {
     background-color: #031627;
-    box-shadow: inset 0 0 20px #ebc60c3d;
+    box-shadow: inset 0 0 20px #ebc60c9b;
 }
 
 /* ========== FOOTER ========== */
