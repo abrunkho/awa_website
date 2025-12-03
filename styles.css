@@ -231,6 +231,10 @@ main {
     padding-top: 64px;
 }
 
+em {
+    font-weight: bold;
+}
+
 .section-1 {
     background-image: linear-gradient(to bottom, #000611, #031627);
 }
