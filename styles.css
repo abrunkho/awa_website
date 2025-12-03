@@ -432,6 +432,7 @@ h2 {
 .start-button {
     font-family: 'Zekton', sans-serif;
     font-size: 1.5rem;
+    text-decoration: none;
     background-color: #000611;
     border: 1px solid #EBC60C;
     color: #EBC60C;
@@ -444,6 +445,7 @@ h2 {
 
 .start-button:hover {
     background-color: #031627;
+    box-shadow: inset 0 0 20px #ebc60c3d;
 }
 
 /* ========== FOOTER ========== */
