@@ -324,7 +324,7 @@ h2 {
     transform: translateX(-50%);
     color: #EBC60C;
     font-size: 28px;
-    font-family: Zekton, sans-serif;
+    font-family: 'Zekton', sans-serif;
     padding: 8px 12px;
     background-color: #031627;
     border-radius: 10px;
@@ -336,10 +336,10 @@ h2 {
 }
 
 /* Slide text */
-.slideText {
+.slideText p {
     color: #EBC60C;
     font-size: 20px;
-    font-family: Zekton, sans-serif;
+    font-family: 'Zekton', sans-serif;
     padding: 8px 12px;
     position: absolute;
     top: 20%;
