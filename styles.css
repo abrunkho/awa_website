@@ -336,18 +336,22 @@ h2 {
 
 .carousel-slide {
     display: none;
+    position: relative;
 }
 
-.carousel-slide::after {
+.carousel-slide:nth-of-type(3)::after,
+.carousel-slide:nth-of-type(4)::after {
+    content: "";
     position: absolute;
     z-index: 15;
     top: 0;
     right: 0;
-    width: 56px;
+    width: 200px;
     aspect-ratio: 1;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%);
     background: linear-gradient(45deg, #df8d3a, #df8d3a);
+    opacity: 0.8;
 }
 
 /* Slide text */
