@@ -338,6 +338,18 @@ h2 {
     display: none;
 }
 
+.carousel-slide::after {
+    position: absolute;
+    z-index: 15;
+    top: 0;
+    right: 0;
+    width: 56px;
+    aspect-ratio: 1;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    background: linear-gradient(45deg, #df8d3a, #df8d3a);
+}
+
 /* Slide text */
 .slideText span {
     color: #EBC60C;
@@ -442,6 +454,7 @@ h2 {
 /* ========== FOOTER ========== */
 .footer-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -459,21 +472,6 @@ h2 {
     gap: 10px;
 }
 
-.footer-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
-}
-
-.footer-right img,
-.footer-left img {
-    height: 30px;
-}
-
 footer a {
     color: #7c8a9f;
     text-decoration: none;
@@ -483,17 +481,23 @@ footer a:hover {
     color: #87ffff;
 }
 
+footer p {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    max-width: 400px;
+    width: auto;
+}
+
 #infini-logo {
-    left: 20px;
+    left: 10px;
     bottom: 20px;
     height: 30px;
 }
 
-footer p {
-    padding: 2px;
-    margin: 2px auto;
-    font-size: 0.7rem;
-    opacity: 0.3;
+#nasa-logo {
+    height: 70px;
+    border-radius: 5px;
+    ;
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
