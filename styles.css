@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -14,6 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* ========== HEADER ========== */
@@ -320,7 +320,7 @@ h2 {
     object-fit: cover;
 }
 
-.carousel-container h3 {
+/* .carousel-container h3 {
     position: absolute;
     top: 10%;
     left: 50%;
@@ -331,22 +331,22 @@ h2 {
     padding: 8px 12px;
     background-color: #031627;
     border-radius: 10px;
-    opacity: 0.7;
-}
+    opacity: 0.9;
+} */
 
 .carousel-slide {
     display: none;
 }
 
 /* Slide text */
-.slideText p {
+.slideText span {
     color: #EBC60C;
     font-size: 20px;
     font-family: 'Zekton', sans-serif;
     padding: 8px 12px;
     position: absolute;
-    top: 45%;
-    left: 5%;
+    top: 25%;
+    left: 10%;
     text-align: left;
     background-color: #031627;
     border-radius: 10px;
@@ -354,21 +354,9 @@ h2 {
     width: 30%;
 }
 
-.caption2 p {
-    top: 30%;
-    left: 60%;
+.slideText h3 {
+    font-size: 28px;
 }
-
-.caption3 p {
-    top: 45%;
-    left: 5%;
-}
-
-.caption4 p {
-    top: 65%;
-    left: 10%;
-}
-
 
 /* The dots/bullets/indicators */
 .dot-container {
@@ -452,7 +440,7 @@ h2 {
 }
 
 /* ========== FOOTER ========== */
-footer {
+.footer-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -499,6 +487,13 @@ footer a:hover {
     left: 20px;
     bottom: 20px;
     height: 30px;
+}
+
+footer p {
+    padding: 2px;
+    margin: 2px auto;
+    font-size: 0.7rem;
+    opacity: 0.3;
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
