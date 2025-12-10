@@ -320,20 +320,6 @@ h2 {
     object-fit: cover;
 }
 
-/* .carousel-container h3 {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #EBC60C;
-    font-size: 28px;
-    font-family: 'Zekton', sans-serif;
-    padding: 8px 12px;
-    background-color: #031627;
-    border-radius: 10px;
-    opacity: 0.9;
-} */
-
 .carousel-slide {
     display: none;
     position: relative;
@@ -389,7 +375,7 @@ h2 {
     color: #EBC60C;
     font-size: 20px;
     font-family: 'Zekton', sans-serif;
-    padding: 8px 12px;
+    padding: 15px;
     position: absolute;
     top: 25%;
     left: 10%;
