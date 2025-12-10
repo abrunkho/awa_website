@@ -495,7 +495,6 @@ h2 {
     width: 100%;
     padding: 20px 40px;
     font-size: 0.9rem;
-    color: #7c8a9f;
     background: #000;
 }
 
@@ -518,6 +517,7 @@ footer a:hover {
 footer p {
     font-size: 0.7rem;
     max-width: 400px;
+    opacity: 0.8;
     width: auto;
 }
 
