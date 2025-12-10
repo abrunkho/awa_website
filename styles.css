@@ -329,7 +329,7 @@ h2 {
 .carousel-slide:nth-of-type(4)::after {
     content: "";
     position: absolute;
-    z-index: 14;
+    z-index: 5;
     top: 0;
     right: 0;
     width: 200px;
@@ -351,7 +351,7 @@ h2 {
     font-family: 'Zekton', sans-serif;
     transform: rotate(45deg);
     transform-origin: center;
-    z-index: 16;
+    z-index: 6;
     pointer-events: none;
 }
 
@@ -366,7 +366,7 @@ h2 {
     font-family: 'Zekton', sans-serif;
     transform: rotate(45deg);
     transform-origin: center;
-    z-index: 16;
+    z-index: 6;
     pointer-events: none;
 }
 
