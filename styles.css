@@ -332,21 +332,21 @@ h2 {
     z-index: 14;
     top: 0;
     right: 0;
-    width: 150px;
+    width: 200px;
     aspect-ratio: 1;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%);
-    background: linear-gradient(45deg, #df8d3a, #df8d3a);
-    opacity: 0.8;
+    background: linear-gradient(45deg, #EBC60C, #EBC60C);
+    opacity: 0.85;
 }
 
 .carousel-slide:nth-of-type(3)::before {
     content: "Coming Soon";
     position: absolute;
-    top: 50px;
-    right: -5px;
-    color: white;
-    font-size: 1.25rem;
+    top: 75px;
+    right: 10px;
+    color: #031627;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: 'Zekton', sans-serif;
     transform: rotate(45deg);
@@ -358,10 +358,10 @@ h2 {
 .carousel-slide:nth-of-type(4)::before {
     content: "Future Site";
     position: absolute;
-    top: 50px;
-    right: 10px;
-    color: white;
-    font-size: 1.25rem;
+    top: 65px;
+    right: 30px;
+    color: #031627;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: 'Zekton', sans-serif;
     transform: rotate(45deg);
