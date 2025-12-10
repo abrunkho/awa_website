@@ -341,10 +341,10 @@ h2 {
 }
 
 .carousel-slide:nth-of-type(3)::before {
-    content: "Coming Soon";
+    content: "In Development";
     position: absolute;
     top: 75px;
-    right: 10px;
+    right: -5px;
     color: #031627;
     font-size: 1.5rem;
     font-weight: bold;
