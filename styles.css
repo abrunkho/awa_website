@@ -343,7 +343,7 @@ h2 {
 .carousel-slide:nth-of-type(4)::after {
     content: "";
     position: absolute;
-    z-index: 15;
+    z-index: 14;
     top: 0;
     right: 0;
     width: 150px;
@@ -728,10 +728,15 @@ footer p {
         font-size: 20px;
     }
 
-    .slideText p {
+    .slideText span {
         font-size: 14px;
         width: 70%;
         top: 50%;
         left: 15%;
+    }
+
+    #infini-logo,
+    #etx-logo {
+        margin-top: 15px
     }
 }
