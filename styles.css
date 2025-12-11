@@ -356,10 +356,10 @@ h2 {
 }
 
 .carousel-slide:nth-of-type(4)::before {
-    content: "Future Site";
+    content: "Concept Phase";
     position: absolute;
-    top: 65px;
-    right: 30px;
+    top: 75px;
+    right: 0px;
     color: #031627;
     font-size: 1.5rem;
     font-weight: bold;
@@ -489,6 +489,10 @@ h2 {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.footer-right {
+    gap: 120px;
 }
 
 footer a {
